@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    height: 70px;
+    background: mistyrose;
+    box-shadow: 0 3px 6px #00000029;
+    justify-content: center;
+}
+
+.container-header-footer {
+    display: flex;
+    height: 100%;
+    width: 1352px;
+    background: rgba(0, 0, 0, 0.3);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+}
+
+.main-top {
+    height: calc(100vh - 70px);
+    background: white url("../images/Background.png") no-repeat bottom;
+}
+
+.stats {
+    display: flex;
+    height: 530px;
+    background: #FFFFFF;
+    justify-content: center;
+}
+
+.single-stat-container {
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    height: 63px;
+    width: 63px;
+    border-radius: 50%;
+}
+
+.icon-1 {
+    background: #FB3B64;
+}
+
+.icon-2 {
+    background: #08A6E4;
+}
+
+.icon-3 {
+    background: #55DFB4;
+}
+
+.container-stats-question-articles {
+    display: flex;
+    height: 100%;
+    width: 1125px;
+    background: rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-title {
+    display: flex;
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-icons {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.articles {
+    display: flex;
+    height: 1400px;
+    background: #F7F7F7;
+    justify-content: center;
+}
+
+.pricing {
+    display: flex;
+    height: 700px;
+    background: mistyrose;
+    justify-content: center;
+}
+
+.container-pricing {
+    height: 100%;
+    width: 1270px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.question-form {
+    display: flex;
+    height: 500px;
+    background: dodgerblue;
+    justify-content: center;
+}
+
+.footer {
+    display: flex;
+    height: 90px;
+    background: aquamarine;
+    justify-content: center;
+}
