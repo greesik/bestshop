@@ -44,8 +44,9 @@ li {
 
 .main-top {
     height: calc(100vh - 70px);
-    background: transparent url("../images/Background.png") no-repeat bottom;
+    background: transparent url("../images/Background.png") no-repeat;
     background-size: contain;
+    background-position: center 400px;
 }
 
 .container-main-top {
@@ -237,7 +238,7 @@ li {
 .pricing {
     display: flex;
     height: 700px;
-    background: mistyrose;
+    background: transparent;
     justify-content: center;
 }
 
@@ -260,6 +261,10 @@ li {
 }
 
 .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     border: 1px solid;
     border-radius: 18px;
     height: 460px;
@@ -283,7 +288,7 @@ li {
 .question-form {
     display: flex;
     height: 500px;
-    background: dodgerblue;
+    background: transparent;
     justify-content: center;
     align-items: center;
 }
@@ -300,7 +305,7 @@ li {
 .contact, .contact-form {
     height: 100%;
     width: 50%;
-    background: darkseagreen;
+    background: white;
     margin: 0 10px;
 }
 
@@ -351,11 +356,54 @@ li {
     background-size: contain;
 }
 
+.contact-form form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #707070;
+    height: 50px;
+    font-size: 24px;
+}
+
+label {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #08A6E4;
+}
+
+.form-agreement {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 12px;
+    color: #707070;
+}
+
+.btn-submit {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    height: 57px;
+    width: 226px;
+    color: #FFFFFF;
+    background: #08A6E4;
+    align-self: flex-end;
+}
+
 .footer {
     display: flex;
     height: 90px;
     /*background: aquamarine;*/
     justify-content: center;
+    box-shadow: 0 -5px 40px #00000029;
 }
 
 .footer-links {
