@@ -416,6 +416,28 @@
     border-color: #55DFB4;
 }
 
+.btn-pricing {
+    width: 150px;
+    height: 50px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+    position: relative;
+    top: 25px;
+}
+
+.btn-pricing-1 {
+    background: #FB3B64;
+}
+
+.btn-pricing-2 {
+    background: #07ACE6;
+}
+
+.btn-pricing-3 {
+    background: #55DFB4;
+}
+
 .pricing-title {
     margin-top: 25px;
     font-family: "Raleway", sans-serif;
