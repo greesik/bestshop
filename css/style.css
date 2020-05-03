@@ -6,9 +6,12 @@
 .header {
     display: flex;
     height: 70px;
+    width: 100%;
     background: #FFFFFF;
     box-shadow: 0 3px 6px #00000029;
     justify-content: center;
+    position: fixed;
+    z-index: 20;
 }
 
 .header-title, .footer-title {
@@ -28,25 +31,39 @@
 }
 
 .nav {
+    height: 70px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-li {
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 70px;
+    box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-size: 11px;
     list-style: none;
-    margin: 50px;
+    margin: 0 30px;
     text-transform: uppercase;
     color: #A5A5A5;
 }
 
+.nav-list:hover {
+    color: #000000;
+    border-bottom: 7px solid #08A6E4;
+    cursor: pointer;
+}
+
 .main-top {
-    height: calc(100vh - 70px);
+    height: 100vh;
     background: transparent url("../images/Background.png") no-repeat;
     background-size: contain;
-    background-position: center 400px;
+    background-position: center 370px;
 }
 
 .container-main-top {
@@ -65,6 +82,7 @@ li {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
     font-size: 49px;
+    margin-top: 150px;
 }
 
 .main-top-h3 {
@@ -105,6 +123,7 @@ li {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .icon {
@@ -115,14 +134,46 @@ li {
 
 .icon-1 {
     background: #FB3B64;
+    z-index: 0;
+
+}
+
+.icon-1::after {
+    content: "";
+    height: 63px;
+    width: 63px;
+    background: url("../images/Person.svg") no-repeat center;
+    right: 10px;
+    z-index: 1;
+    position: absolute;
 }
 
 .icon-2 {
     background: #08A6E4;
 }
 
+.icon-2::after {
+    content: "";
+    height: 63px;
+    width: 63px;
+    background: url("../images/Eye.svg") no-repeat center;
+    right: 45px;
+    z-index: 1;
+    position: absolute;
+}
+
 .icon-3 {
     background: #55DFB4;
+}
+
+.icon-3::after {
+    content: "";
+    height: 63px;
+    width: 63px;
+    background: url("../images/Catalog.svg") no-repeat center;
+    right: 20px;
+    z-index: 1;
+    position: absolute;
 }
 
 .container-stats-articles {
@@ -179,6 +230,7 @@ li {
 }
 
 .article-title {
+    width: 350px;
     font-family: "Raleway", sans-serif;
     font-weight: 400;
     font-size: 36px;
@@ -188,22 +240,92 @@ li {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 16px;
+    margin-top: 30px;
 }
 
 .article-text {
     width: 50%;
 }
 
+.article-text-3 {
+    width: 100%;
+    position: center;
+}
+
+.article-text-1::after {
+    content: "";
+    width: 332px;
+    height: 4px;
+    background-color: #FB3B64;
+    display: block;
+    margin-top: 50px;
+}
+
+.article-text-2::after {
+    content: "";
+    width: 332px;
+    height: 4px;
+    background-color: #07ACE6;
+    display: block;
+    margin-top: 50px;
+}
+
+.article-text-3::after {
+    content: "";
+    width: 332px;
+    height: 4px;
+    background-color: #55DFB4;
+    display: block;
+    margin-top: 50px;
+}
+
+.article-photo {
+    position: relative
+}
+
+.article-photo img {
+    position: relative;
+    z-index: 2;
+}
+
 .article-photo-1 {
-     height: 100%;
-     width: 50%;
-     background: url("../images/Macbook2.png") no-repeat center;
+    height: 100%;
+    width: 50%;
+    top: 50px;
+    right: -50px;
  }
+
+.article-photo-1::before {
+    content: "";
+    width: 180px;
+    height: 180px;
+    background-color: #FB3B64;
+    display: block;
+    border-radius: 40px;
+    position: absolute;
+    right: 150px;
+    top: -20px;
+    transform: rotate(45deg);
+}
+
 
 .article-photo-2 {
     height: 100%;
     width: 50%;
-    background: url("../images/iPhone2.png") no-repeat center;
+    top: 15px;
+    left: 30px;
+}
+
+.article-photo-2::before {
+    content: "";
+    width: 320px;
+    height: 320px;
+    background-color: #07ACE6;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: -20px;
 }
 
 .benefit {
@@ -226,6 +348,7 @@ li {
 .benefit-shorter {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     width: 625px;
 }
 
@@ -242,6 +365,13 @@ li {
     justify-content: center;
 }
 
+.pricing-section-title {
+    margin-top: 90px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+}
+
 .container-pricing {
     display: flex;
     flex-direction: column;
@@ -249,7 +379,7 @@ li {
     justify-content: center;
     height: 100%;
     width: 1270px;
-    background: rgba(0, 0, 0, 0.3);
+    /*background: rgba(0, 0, 0, 0.3);*/
 }
 
 .boxes-container {
@@ -279,10 +409,81 @@ li {
     border-color: #07ACE6;
     height: 500px;
     width: 405px;
+    box-shadow: 5px 10px 27px #07ACE629;
 }
 
 .box-3 {
     border-color: #55DFB4;
+}
+
+.pricing-title {
+    margin-top: 25px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #13253B;
+}
+
+.pricing-title-main {
+    font-size: 21px;
+}
+
+.offer-type {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #13253B;
+}
+
+.offer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    margin: 50px;
+}
+
+.offer {
+    list-style: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.offer::before {
+    display: inline-block;
+    margin-right: 10px;
+    content: "";
+    height: 11px;
+    width: 11px;
+    border: 1px solid #55DFB4;
+    background: url("../images/Checkmark.svg") no-repeat center;
+    background-size: 70%;
+}
+
+.offer-not::before {
+    border: 1px solid #EB476E;
+    background: url("../images/signs.svg") no-repeat center;
+    background-size: contain;
+}
+
+.price {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    font-size: 46px;
+}
+
+.price-1 {
+    color: #FB3B64;
+}
+
+.price-2 {
+    color: #07ACE6;
+}
+
+.price-3 {
+    color: #55DFB4;
 }
 
 .question-form {
