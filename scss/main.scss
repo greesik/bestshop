@@ -362,32 +362,42 @@ $font-opensans: "Open Sans", sans-serif;
   position: center;
 }
 
-//.article-text-1::after {
-//  content: "";
-//  width: 332px;
-//  height: 4px;
-//  background-color: #FB3B64;
-//  display: block;
-//  margin-top: 50px;
+.article-text-1::after {
+
+  @media (min-width: 426px){
+    content: "";
+    width: 332px;
+    height: 4px;
+    background-color: #FB3B64;
+    display: block;
+    margin-top: 50px;
+  }
+}
 
 
-//.article-text-2::after {
-//  content: "";
-//  width: 332px;
-//  height: 4px;
-//  background-color: #07ACE6;
-//  display: block;
-//  margin-top: 50px;
-//}
+.article-text-2::after {
 
-//.article-text-3::after {
-//  content: "";
-//  width: 332px;
-//  height: 4px;
-//  background-color: #55DFB4;
-//  display: block;
-//  margin-top: 50px;
-//}
+  @media (min-width: 426px) {
+    content: "";
+    width: 332px;
+    height: 4px;
+    background-color: #07ACE6;
+    display: block;
+    margin-top: 50px;
+  }
+}
+
+.article-text-3::after {
+
+  @media (min-width: 426px) {
+    content: "";
+    width: 332px;
+    height: 4px;
+    background-color: #55DFB4;
+    display: block;
+    margin-top: 50px;
+  }
+}
 
 .article-photo {
   position: relative;
@@ -398,7 +408,7 @@ $font-opensans: "Open Sans", sans-serif;
 .article-photo img {
   position: absolute;
   align-self: center;
-  z-index: 2;
+  z-index: 0;
 }
 
 .article-photo-1 {
@@ -572,6 +582,8 @@ $font-opensans: "Open Sans", sans-serif;
 
   @media (min-width: 426px) {
     flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
     height: 460px;
     width: 372px;
   }
@@ -586,6 +598,12 @@ $font-opensans: "Open Sans", sans-serif;
   height: 300px;
   width: 90%;
   box-shadow: 5px 10px 27px #07ACE629;
+
+  @media (min-width: 426px) {
+    flex-direction: column;
+    height: 500px;
+    width: 405px;
+  }
 }
 
 .box-3 {
@@ -631,6 +649,15 @@ $font-opensans: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 12px;
   color: #13253B;
+}
+
+.offer-price {
+
+  @media (min-width: 426px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .offer-list {
@@ -689,10 +716,13 @@ $font-opensans: "Open Sans", sans-serif;
 
 .question-form {
   display: flex;
-  //height: 500px;
   background: transparent;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 426px) {
+    height: 500px;
+  }
 }
 
 .container-question {
@@ -714,7 +744,7 @@ $font-opensans: "Open Sans", sans-serif;
 .contact, .contact-form {
   height: 100%;
   width: 90%;
-  background: white;
+  background: transparent;
   margin: 0 10px;
 
   @media (min-width: 426px) {
@@ -747,14 +777,23 @@ $font-opensans: "Open Sans", sans-serif;
   font-size: 16px;
 }
 
+.contact-email, .contact-phone {
+  display: flex;
+}
+
 .contact-icons {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 16px;
   color: #A5A5A5;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (min-width: 426px) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .contact-icon {
